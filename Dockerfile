@@ -1,10 +1,9 @@
-FROM msaidf/rstudio-python
+FROM msaidf/saidr
+MAINTAINER "Muhamad Said Fathurrohman" muh.said@gmail.com
 
-RUN apt-get install curl 
-RUN apt-get install -y neovim 
-RUN pip install neovim
-RUN pip3 install neovim
-RUN curl -fLo /usr/share/nvim/runtime/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-RUN echo 'source /home/rstudio/.vim/init.vim' > /usr/share/nvim/sysinit.vim
+RUN install2.r rdrobust rdlocrand rddensity rdmulti rdpower rdd rddtools ClubSandwich multiwayvcov && \
+    lfe survival Matching MatchIt Amelia mcmc MCMCpack wfe CausalImpact
 
-VOLUME ['/home/rstudio']
+RUN install2.r tm tidytext twitteR gtrendsR koRpus udpipe tensorflow h2o sparklyr
+
+RUN install2.r foreach pbapply doMC doRedis bigmemory biganalytics bigalgebra biglm speedglm 
