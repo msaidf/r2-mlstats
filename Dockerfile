@@ -1,4 +1,4 @@
-FROM msaidf/r1-dbgraph:3.6
+FROM msaidf/r1-dbgraph:3.6.0
 MAINTAINER "Muhamad Said Fathurrohman" muh.said@gmail.com
 
 RUN install2.r clubSandwich multiwayvcov lfe survival Matching MatchIt Amelia mcmc MCMCpack wfe CausalImpact \
